@@ -1,6 +1,6 @@
 module.exports = {
     checkLogin:function checkLogin(req,res,next) {
-        console.log(req.session)
+        // console.log(req.session)
         if(!req.session.user){
 
             req.flash('error','未登录');
@@ -9,7 +9,7 @@ module.exports = {
         next();
     },
     checkNotLogin:function checkNotLogin(req,res,next) {
-        console.log(req.session)
+        // console.log(req.session)
         if(req.session.user){
 
             req.flash('error','已登录');
